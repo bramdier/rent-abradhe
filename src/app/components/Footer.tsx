@@ -1,4 +1,5 @@
 import WhatsAppButton from './WhatsAppButton'
+import Image from 'next/image'
 
 export default function Footer() {
   return (
@@ -6,12 +7,18 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-2xl font-bold mb-4">Abradhe Rent</h3>
+            <Image
+              src="/images/logo.png" // Ganti dengan path logo kamu
+              alt="Abradhe Rent"
+              width={120}       // Sesuaikan ukuran sesuai kebutuhan
+              height={40}
+              priority
+            />
             <p className="text-primary-light">
               Menyediakan berbagai alat berkualitas untuk mendukung event anda dengan harga terjangkau.
             </p>
           </div>
-          
+
           <div>
             <h4 className="text-lg font-semibold mb-4">Kontak Kami</h4>
             <ul className="space-y-2 text-primary-light">
@@ -20,13 +27,13 @@ export default function Footer() {
               <li>Telepon: (021) 12345678</li>
             </ul>
           </div>
-          
+
           <div>
             <h4 className="text-lg font-semibold mb-4">Sewa Sekarang</h4>
             <WhatsAppButton />
           </div>
         </div>
-        
+
         <div className="border-t border-primary mt-8 pt-8 text-center text-primary-light">
           <p>&copy; {new Date().getFullYear()} RentalAlat. All rights reserved.</p>
         </div>
