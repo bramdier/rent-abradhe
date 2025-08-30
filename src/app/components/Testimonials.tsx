@@ -24,18 +24,22 @@ export default function Testimonials() {
   ]
 
   return (
-    <section id="testimonials" className="py-16 bg-gray-50">
+    <section id="testimonials" className="py-20 bg-gradient-to-br from-[#1e293b]/80 via-[#00ffe7]/10 to-[#2c5364]/80">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Apa Kata Pelanggan Kami</h2>
-        
-        <div className="grid md:grid-cols-3 gap-8">
+        <h2 className="text-4xl font-extrabold text-center text-[var(--accent)] mb-14 drop-shadow-[0_0_16px_#00ffe7] tracking-wide">
+          Apa Kata Pelanggan Kami
+        </h2>
+        <div className="grid md:grid-cols-3 gap-10">
           {testimonials.map(testimonial => (
-            <div key={testimonial.id} className="bg-white p-6 rounded-lg shadow-md">
+            <div
+              key={testimonial.id}
+              className="bg-[var(--glass-bg)] p-8 rounded-3xl shadow-[0_0_24px_#00ffe7,0_0_8px_#fff_inset] border border-[var(--accent)] backdrop-blur-xl flex flex-col items-center transition hover:scale-105"
+            >
               <div className="flex items-center mb-4">
                 {[...Array(5)].map((_, i) => (
-                  <svg 
+                  <svg
                     key={i}
-                    className={`w-5 h-5 ${i < testimonial.rating ? 'text-yellow-400' : 'text-gray-300'}`}
+                    className={`w-6 h-6 ${i < testimonial.rating ? 'text-[var(--accent)] drop-shadow-[0_0_8px_#00ffe7]' : 'text-gray-400'}`}
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -43,10 +47,12 @@ export default function Testimonials() {
                   </svg>
                 ))}
               </div>
-              <p className="text-gray-600 mb-4">{testimonial.content}</p>
-              <div>
-                <h4 className="font-bold text-gray-900">{testimonial.name}</h4>
-                <p className="text-primary text-sm">{testimonial.role}</p>
+              <p className="text-lg text-[var(--foreground)] mb-6 italic text-center">
+                "{testimonial.content}"
+              </p>
+              <div className="text-center">
+                <h4 className="font-bold text-[var(--accent)] text-xl drop-shadow-[0_0_8px_#00ffe7]">{testimonial.name}</h4>
+                <p className="text-xs text-[var(--foreground)]/70 mt-1">{testimonial.role}</p>
               </div>
             </div>
           ))}

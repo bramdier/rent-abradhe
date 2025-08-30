@@ -12,10 +12,12 @@ export default function Home() {
 
       <main className="flex-grow">
         <Hero />
-
+        
         <section id="products" className="py-16">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Alat yang Tersedia</h2>
+            <h2 className="text-4xl font-extrabold text-center text-[var(--accent)] mb-14 drop-shadow-[0_0_16px_#00ffe7] tracking-wide">
+              Alat yang Tersedia
+            </h2>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {products.map(product => (
