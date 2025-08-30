@@ -1,5 +1,4 @@
-import WhatsAppButton from './WhatsAppButton'
-import Image from 'next/image'
+
 
 export default function Footer() {
   return (

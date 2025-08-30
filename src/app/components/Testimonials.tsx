@@ -48,7 +48,7 @@ export default function Testimonials() {
                 ))}
               </div>
               <p className="text-lg text-[var(--foreground)] mb-6 italic text-center">
-                "{testimonial.content}"
+                {testimonial.content}
               </p>
               <div className="text-center">
                 <h4 className="font-bold text-[var(--accent)] text-xl drop-shadow-[0_0_8px_#00ffe7]">{testimonial.name}</h4>
